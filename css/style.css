@@ -1,43 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
+
+/* ===== Base ===== */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
     background: #fff6f9;
+    color: #333;
 }
 
+/* ===== Headings ===== */
+h1, h2, h3 {
+    font-family: "Playfair Display", "Times New Roman", serif;
+    letter-spacing: 1px;
+}
+
+/* ===== Header ===== */
 header {
-    background: #c2185b;
+    background: linear-gradient(135deg, #b3124d, #d81b60);
     color: white;
-    padding: 15px;
+    padding: 22px 15px;
     text-align: center;
 }
 
+/* ===== Navigation ===== */
 nav a {
     color: white;
-    margin: 0 12px;
+    margin: 0 14px;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
+    position: relative;
 }
 
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: #ffd1dc;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ===== Hero ===== */
 .hero {
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background: radial-gradient(circle at top, #ffe3ec, #fff6f9);
 }
 
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ===== About ===== */
 .about {
-    padding: 30px;
+    padding: 40px;
     text-align: center;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
+/* ===== Buttons ===== */
 .btn {
     display: inline-block;
-    background: #c2185b;
+    background: linear-gradient(135deg, #c2185b, #e91e63);
     color: white;
-    padding: 12px 22px;
+    padding: 14px 26px;
     text-decoration: none;
-    border-radius: 6px;
-    margin-top: 15px;
+    border-radius: 30px;
+    margin-top: 18px;
+    font-size: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(194, 24, 91, 0.4);
+}
+
+/* ===== Products ===== */
 .products {
     display: flex;
     justify-content: center;
@@ -51,14 +105,21 @@ nav a {
     margin: 15px;
     width: 220px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
+/* ===== Contact ===== */
 .contact {
     text-align: center;
     padding: 30px;
@@ -68,6 +129,7 @@ nav a {
     margin: 20px 0;
 }
 
+/* ===== Form ===== */
 form {
     max-width: 400px;
     margin: auto;
@@ -77,19 +139,23 @@ input, textarea, button {
     width: 100%;
     padding: 10px;
     margin: 8px 0;
+    font-family: "Poppins", sans-serif;
 }
 
 button {
     background: #c2185b;
     color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 25px;
     cursor: pointer;
 }
 
+/* ===== Footer ===== */
 footer {
-    background: #c2185b;
+    background: #b3124d;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 14px;
+    font-size: 14px;
+    letter-spacing: 0.5px;
 }
